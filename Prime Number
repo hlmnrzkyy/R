@@ -1,0 +1,36 @@
+prime_check <- function(number){
+	if(number < 2){
+    	print(paste(number, "is not a prime number"))
+    }
+    else if(number == 2){
+    	print(paste(number, "is a prime number"))
+    }
+    else{
+    	primeNumber <- 2
+    	for(i in 3:number){
+            rem <- (number %% primeNumber)
+            if(rem == 0){
+            	print(paste(number, "is not a prime number"))
+                break
+            }
+            else{
+            	rem <- (i %% primeNumber)
+                if(rem == 0){
+                	print(paste(number, "is not a prime number"))
+                    break
+                }
+                else{
+                	primeNumber <- i
+                    if(i == number){
+                    	print(paste(number, "is a prime number"))
+                    }
+                }
+            }
+        }
+    }
+}
+
+for (x in 1:10){
+	prime_check(x)
+}
+
