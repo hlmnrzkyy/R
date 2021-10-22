@@ -30,7 +30,7 @@ prime_check <- function(number){
     }
 }
 
-for (x in 1:10){
+for (x in 1:10000){
 	prime_check(x)
 }
 
